@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-weight: 900;
+    opacity: 80%;
+    margin: 5px;
+    font-size: large;
+    background-image: url(./imagens/every\ one\ pointing\ meme.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(34, 34, 34, 0.8)
+}
+
+input {
+    background-color: darkgray;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+
+button {
+    font-size: larger;
+    margin-top: 260px;
+    padding: 20px;
+    background-color: rgba(239, 247, 127, 0.1);
+    cursor: pointer;
+    border: none;
+    margin-left: 600px;
+}
