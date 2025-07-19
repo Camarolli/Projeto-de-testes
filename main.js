@@ -18,6 +18,19 @@ botaoCadastrar.addEventListener("click", function (e) {
         return;
     }
 
+    // Verifica se já existe um registro igual
+    const linhas = tabelaCorpo.querySelectorAll("tr");
+    for (let linha of linhas) {
+        const nomeExistente = linha.children[0].textContent;
+        const numeroExistente = linha.children[1].textContent;
+
+        if (nomeExistente === nome && numeroExistente === numero) {
+            alert("Esse registro já existe!");
+            return; // cancela o cadastro
+        }
+    }
+
+
     // Cria nova linha e colunas
     const novaLinha = document.createElement("tr");
 
@@ -25,7 +38,7 @@ botaoCadastrar.addEventListener("click", function (e) {
     colunaNome.textContent = nome;
 
     const colunaNumero = document.createElement("td");
-    colunaNumero.textContent = numero;
+    colunaNumero.textContent = String(numero).slice(0, 12);
 
     novaLinha.appendChild(colunaNome);
     novaLinha.appendChild(colunaNumero);

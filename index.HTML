@@ -11,14 +11,14 @@
 <body>
     <!---Formulário principal-->
     <form id="formulário">
-        <input type="text" id="Seu-nome" required placeholder="Seu nome:">
-        <input type="number" id="Seu-número" required placeholder="Seu número:">
+        <input type="text" id="Seu-nome" maxlength="15" required placeholder="Seu nome:">
+        <input type="tel" id="Seu-número" maxlength="12" required placeholder="Seu número:">
     </form>
     <!--Tabela principal-->
-    <table border="2px">
+    <table width="30%" border="4px">
         <thead>
             <tr>
-                <th>Nome</th>
+                <th>Nome:</th>
                 <th>Número telefone:</th>
             </tr>
         </thead>
@@ -26,7 +26,9 @@
         </tbody>
     </table>
     <!---botão fora do formulário-->
-    <button type="submit" form="formulário">Cadastrar</button>
+    <div class="botao-container">
+        <button type="submit" form="formulário" id="botao-humor">Cadastrar</button>
+    </div>
     <script src="./main.js"></script>
 </body>
 

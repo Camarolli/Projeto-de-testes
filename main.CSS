@@ -4,7 +4,6 @@
 }
 
 body {
-    font-weight: 900;
     opacity: 80%;
     margin: 5px;
     font-size: large;
@@ -14,34 +13,50 @@ body {
 }
 
 form {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(34, 34, 34, 0.8)
+    text-align: center;
+    background-color: rgba(34, 34, 34, 0.8);
 }
 
 input {
     background-color: darkgray;
 }
 
-table {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: whitesmoke;
+/* Container flutuante */
+.botao-container {
+    position: fixed;
+    /* fica fixo na tela */
+    top: 53%;
+    /* ajuste de posição */
+    left: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    pointer-events: auto;
 }
 
-th,
-td {
-    padding: 5px;
-}
-
-
-button {
+/* Botão apontado */
+#botao-humor {
     font-size: larger;
-    margin-top: 260px;
     padding: 20px;
     background-color: rgba(239, 247, 127, 0.1);
     cursor: pointer;
     border: none;
-    margin-left: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+/* Mantém a tabela no centro + alinhamento */
+table {
+    margin: 0 auto;
+    width: 340px;
+    justify-content: center;
+    z-index: 1;
+    border-collapse: collapse;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 8px 16px;
+    border: 1px solid #cccc
 }
